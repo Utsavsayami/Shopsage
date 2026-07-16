@@ -1,0 +1,51 @@
+import authService from "../services/auth.service.js";
+
+const register = async (req, res) => {
+  try {
+    const { name, email, password } = req.body;
+
+    const result = await authService.register({
+      name,
+      email: email.toLowerCase(),
+      password,
+      role: ["CUSTOMER"],
+    });
+
+    return res.status(201).json({
+      message: "User registered successfully",
+      data: result,
+    });
+  } catch (err) {
+    console.error("REGISTER ERROR:", err);
+    return res.status(400).json({ message: err.message });
+  }
+};
+
+const login = async (req, res) => {
+  try {
+    const { email, password } = req.body;
+    const result = await authService.login({
+      email: email.toLowerCase(),
+      password,
+    });
+
+    return res.status(200).json({
+      message: "Login successful",
+      data: result,
+    });
+  } catch (err) {
+    return res.status(401).json({ message: err.message });
+  }
+};
+
+const refreshToken = async (req, res) => {
+  try {
+    const { refreshToken } = req.body;
+    const result = await authService.refreshToken(refreshToken);
+    return res.status(200).json({ data: result });
+  } catch (err) {
+    return res.status(403).json({ message: err.message });
+  }
+};
+
+export default { register, login, refreshToken };

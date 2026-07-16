@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopSage | Smart Ecommerce</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">ShopSage</div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#why-choose-us">About Us</a></li>
+      <li><a href="#categories">Categories</a></li>
+      <li><a href="cart.html">Cart 🛒</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <button class="cart-btn" type="button" onclick="toggleCart()">
+        Cart <span id="cartCount">0</span>
+      </button>
+      <span id="userName"></span>
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">â˜°</div>
+  </nav>
+
+    <header class="hero">
+      <div class="hero-content">
+        <span class="hero-tag">Red, white, and dark blue shopping</span>
+        <h1>Everything your customers need, styled with confidence.</h1>
+        <p>ShopSage brings fashion, electronics, shoes, and accessories into one fast storefront with business tools built in.</p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="products.html">Shop Products</a>
+          <a class="secondary-btn" href="business-dashboard.html">Business Dashboard</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Featured</p>
+          <h2>Customer Favorites</h2>
+          <p class="section-subtitle">A sharper selection of essentials, updated for the new ShopSage theme.</p>
+        </div>
+        <a class="secondary-btn" href="products.html">View All</a>
+      </div>
+      <div class="grid product-grid" data-product-grid="featured"></div>
+    </section>
+
+    <section class="section dark">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Why ShopSage</p>
+          <h2>Built for buyers and sellers</h2>
+          <p class="section-subtitle">Customers get simple checkout. Businesses get products, inventory, and order visibility.</p>
+        </div>
+      </div>
+      <div class="grid dashboard-grid">
+        <article class="stat-card"><h3>Fast Delivery</h3><strong>24h</strong><p>Priority shipping for major city orders.</p></article>
+        <article class="stat-card"><h3>Secure Checkout</h3><strong>100%</strong><p>Protected customer order flow.</p></article>
+        <article class="stat-card"><h3>Business Tools</h3><strong>2</strong><p>Dashboard and admin panel included.</p></article>
+        <article class="stat-card"><h3>Live Catalog</h3><strong>8+</strong><p>Products ready for browsing and checkout.</p></article>
+      </div>
+    </section>
+
+  <!-- Why Choose Us -->
+  <section class="why-choose-us" id="why-choose-us">
+    <h2>Why Choose Us</h2>
+    <p class="section-subtitle">Everything you need for a premium shopping experience in one place.</p>
+
+    <div class="choose-grid">
+      <article class="choose-card">
+        <h3>Fast Delivery</h3>
+        <p>Lightning-fast shipping across major cities with real-time order tracking.</p>
+      </article>
+      <article class="choose-card">
+        <h3>Secure Payments</h3>
+        <p>Protected checkout with trusted payment options and encrypted transactions.</p>
+      </article>
+      <article class="choose-card">
+        <h3>Top-rated Quality</h3>
+        <p>Each product is handpicked to meet high standards of durability and style.</p>
+      </article>
+      <article class="choose-card">
+        <h3>24/7 Support</h3>
+        <p>Our support team is always ready to help with orders, returns, or guidance.</p>
+      </article>
+  <!-- Categories -->
+  <section class="categories">
+    <h2>Categories</h2>
+
+    <div class="category-grid">
+      <div class="category-card">Fashion</div>
+      <div class="category-card">Electronics</div>
+      <div class="category-card">Shoes</div>
+      <div class="category-card">Accessories</div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <div class="feature-card">
+      <h3>ðŸšš Fast Delivery</h3>
+    </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div><h3>ShopSage</h3><p>A modern ecommerce storefront for shoppers and growing businesses.</p></div>
+      <div><h4>Shop</h4><a href="products.html">Products</a><a href="deals.html">Deals</a><a href="cart.html">Cart</a></div>
+      <div><h4>Business</h4><a href="business-dashboard.html">Dashboard</a><a href="admin.html">Admin Panel</a><a href="orders.html">Orders</a></div>
+      <div><h4>Support</h4><p>hello@shopsage.com</p><p>Open daily</p></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 ShopSage</span><span>Privacy · Terms · Accessibility</span></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

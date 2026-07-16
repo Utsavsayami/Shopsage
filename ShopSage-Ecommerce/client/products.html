@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopSage | Products</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="tailwind.output.css">
+</head>
+<body>
+  <div class="site-shell">
+    <nav class="navbar">
+      <a class="logo" href="home.html">ShopSage</a>
+      <ul class="nav-links">
+        <li><a data-nav href="home.html">Home</a></li>
+        <li><a data-nav href="products.html">Products</a></li>
+        <li><a data-nav href="categories.html">Categories</a></li>
+        <li><a data-nav href="deals.html">Deals</a></li>
+        <li><a data-nav href="business-dashboard.html">Business</a></li>
+      </ul>
+      <div class="nav-right">
+        <span class="user-label" data-user-name></span>
+        <a class="cart-btn" href="cart.html">Cart <span data-cart-count>0</span></a>
+        <a class="login-btn" data-login-link href="index.html">Login</a>
+        <button class="logout-btn" data-logout-button onclick="logout()" hidden>Logout</button>
+      </div>
+    </nav>
+
+    <main class="section">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Catalog</p>
+          <h1>All Products</h1>
+          <p class="section-subtitle" data-results-count>Showing products</p>
+        </div>
+      </div>
+
+      <form class="search-bar" data-search-form>
+        <input data-search-input type="search" placeholder="Search products, categories, or deals">
+        <button class="primary-btn" type="submit">Search</button>
+      </form>
+
+      <div class="filter-row">
+        <button class="filter-button" type="button" data-category-filter="all">All</button>
+        <button class="filter-button" type="button" data-category-filter="Fashion">Fashion</button>
+        <button class="filter-button" type="button" data-category-filter="Electronics">Electronics</button>
+        <button class="filter-button" type="button" data-category-filter="Shoes">Shoes</button>
+        <button class="filter-button" type="button" data-category-filter="Accessories">Accessories</button>
+      </div>
+
+      <div class="panel" data-empty-state hidden>No products match this search.</div>
+      <div class="grid product-grid" data-product-grid="all"></div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
