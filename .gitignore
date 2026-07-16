@@ -1,0 +1,38 @@
+# Backend secrets
+**/.env
+**/.env.*
+!**/.env.example
+
+# Node
+**/node_modules/
+**/npm-debug.log*
+**/yarn-error.log*
+
+# Flutter / Dart
+**/.dart_tool/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/.packages
+**/build/
+**/.pub-cache/
+**/.pub/
+**/coverage/
+
+# Android
+**/android/.gradle/
+**/android/local.properties
+**/*.jks
+**/*.keystore
+
+# iOS / macOS
+**/ios/Pods/
+**/macos/Pods/
+
+# Editors
+**/.idea/
+**/.vscode/
+**/*.iml
+
+# Windows
+Thumbs.db
+Desktop.ini
