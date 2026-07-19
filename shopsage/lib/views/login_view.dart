@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../controllers/auth_controller.dart';
+import '../features/home/pages/home_page.dart';
 import '../widgets/auth_scaffold.dart';
 import 'forgot_password_view.dart';
 import 'signup_view.dart';
@@ -37,9 +38,17 @@ class _LoginViewState extends State<LoginView> {
 
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: Text(result?.message ?? _authController.error ?? 'Login failed'),
+        content:
+            Text(result?.message ?? _authController.error ?? 'Login failed'),
       ),
     );
+
+    if (result != null) {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (_) => const HomePage()),
+      );
+    }
   }
 
   @override
