@@ -1,4 +1,9 @@
 class ApiConfig {
+  static const String backendUrl = 'http://localhost:5000';
+
   static const String baseUrl =
-      'http://localhost:5000/api/auth';
+      '$backendUrl/api/auth';
+
+  static const String productsUrl =
+      '$backendUrl/api/products';
 }
