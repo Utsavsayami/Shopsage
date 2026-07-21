@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'views/login_view.dart';
+import 'package:get/get.dart';
+import 'package:shopsage_auth_app/views/login_view.dart';
+import 'package:shopsage_auth_app/views/vendor_dashboard_view.dart';
 
 void main() {
   runApp(const ShopSageApp());
@@ -10,7 +12,7 @@ class ShopSageApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'ShopSage',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
@@ -20,7 +22,7 @@ class ShopSageApp extends StatelessWidget {
           border: OutlineInputBorder(),
         ),
       ),
-      home: const LoginView(),
+      home: LoginView(),
     );
   }
 }
